@@ -8,16 +8,12 @@ library(caret)
 
 
 setwd('~/GC')
-####Load the model as well as the input feature list
-load("try10Modelsth0.7.RData")
 
-best.i = 31#
 
+####Read the best model
+lda.mod = readRds('./bestLDA.Rds')
 ####The input features
-input.items = out.items.100[1:best.i]
-
-####The best model
-lda.mod = mls6[[best.i]]
+input.items = colnames(lda.mod$trainingData)[-1]
 
 
 
