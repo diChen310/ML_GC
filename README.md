@@ -1,7 +1,7 @@
 # ML_GC
 Machine learning models for classification and subtying of GC.
 
-1.For Classification
+1.For Classification,
 The pre-trained model was saved in the bestLDA.Rds file. 
 The model can be read as below:
 
@@ -19,7 +19,7 @@ can be utilized as the input for prediction of being a GC sample.
 
 The code was in predict_LDA.R
 
-2.For subtyping
+2.For subtyping,
 The pre-trained model was saved in the subtype_glmnet.Rds file.
 The model can be read as below:
 
