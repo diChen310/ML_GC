@@ -1,6 +1,7 @@
 # ML_GC
-A machine learning model for predict  cancer and health samples
+Machine learning models for classification and subtying of GC.
 
+1.For Classification
 The pre-trained model was saved in the bestLDA.Rds file. 
 The model can be read as below:
 
@@ -17,3 +18,14 @@ Cer 38:1;2O|Cer 18:1;2O/20:0, SM 35:2;2Oand LPE 18:0)
 can be utilized as the input for prediction of being a GC sample.
 
 The code was in predict_LDA.R
+
+2.For subtyping
+The pre-trained model was saved in the subtype_glmnet.Rds file.
+The model can be read as below:
+
+glm.mod = readRDS(file='subtype_glmnet.Rds')'
+
+Then, any new metabolism matrix with 70 metabolites as saved in the model (colnames(glm.mod$trainingData)[-1])
+can be utilized as the input for prediction of the subtypes.
+
+The code was in subtype_glmnet.R
