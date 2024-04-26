@@ -13,7 +13,7 @@ input.items = colnames(glm.mod$trainingData)[-1]
 pred.data = new.pred[,c(-1,-2,-3,-4)]
 rownames(pred.data)=new.pred$name
 pred.data = log2(as.matrix(pred.data))+5
-pred.data = scale(pred.data,center = mean.all,scale=sd.all)
+pred.data = scale(pred.data)
 pred.data.t = pred.data[,out.items.uncor]
 
 ####The predicted result for one sample return MC1, MC2 or MC3 
