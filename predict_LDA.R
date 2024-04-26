@@ -21,7 +21,7 @@ input.items = colnames(lda.mod$trainingData)[-1]
 rownames(new.idt)=new.idt$name
 idt.data = new.idt[,c(-1,-2,-3,-4)]
 idt.data = log2(as.matrix(idt.data))+5
-idt.data = scale(idt.data,center = mean.all,scale=sd.all)
+idt.data = scale(idt.data)
 ind.y = predict(lda.mod,idt.data[,input.items],type = 'prob')
 table(factor(new.idt$sampleType),factor(ifelse(ind.y[,2]>0.5,'P','N')))
 tt=table(factor(new.idt$sampleType),factor(ifelse(ind.y[,2]>0.5,'P','N')))
