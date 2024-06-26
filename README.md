@@ -1,7 +1,7 @@
 # ML_GC
 Machine learning models for classification and subtying of GC.
 
-1.For Classification,
+For Classification,
 The pre-trained model was saved in the bestLDA.Rds file. 
 The model can be read as below:
 
