@@ -12,8 +12,6 @@ Then, any new metabolism matrix with the 19 metabolites
 and the sampleID as the columns can be read into R as one matrix: idt.data;
 the prediction can be done by the following codes:
 
-
-####The input features
 input.items = colnames(lda.mod$trainingData)[-1]
 
 idt.data = log2(as.matrix(idt.data))+5
