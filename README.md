@@ -17,7 +17,9 @@ the prediction can be done by the following codes:
 input.items = colnames(lda.mod$trainingData)[-1]
 
 idt.data = log2(as.matrix(idt.data))+5
+
 idt.data = scale(idt.data)
+
 ind.y = predict(lda.mod,idt.data[,input.items],type = 'prob')
 
 
