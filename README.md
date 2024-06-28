@@ -1,5 +1,5 @@
 # ML_GC
-Machine learning models for classification and subtying of GC.
+Machine learning models for classification of GC and healthy control samples.
 
 For Classification,
 The pre-trained model was saved in the bestLDA.Rds file. 
