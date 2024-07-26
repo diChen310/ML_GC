@@ -30,16 +30,24 @@ glm.mod = readRDS(file='subtype_glmnet.Rds')
 and the prediction can be done by the following codes:
 
 ########The input features
+
 input.items = colnames(glm.mod$trainingData)[-1]
 
 ####prediction for the other datasets, pred.data
+
 pred.data = new.pred[,c(-1,-2,-3,-4)]
+
 rownames(pred.data)=new.pred$name
+
 pred.data = log2(as.matrix(pred.data))+5
+
 pred.data = scale(pred.data)
+
 pred.data.t = pred.data[,out.items.uncor]
 
+
 ####The predicted result for one sample return MC1, MC2 or MC3 
+
 pred.data.pred = predict(mod.lda,pred.data.t) 
 
 The code was also in subtype_glmnet.R
