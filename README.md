@@ -19,9 +19,12 @@ idt.data = log2(as.matrix(idt.data))+5
 idt.data = scale(idt.data)
 
 ind.y = predict(lda.mod,idt.data[,input.items],type = 'prob')
+
 The code was also in predict_LDA.R
 
-For prognosis subtype prediction, the  predictor model can be read from the .Rds object
+For prognosis subtype prediction, 
+
+the  predictor model can be read from the .Rds object
 
 glm.mod = readRDS(file='subtype_glmnet.Rds')
 and the prediction can be done by the following codes:
